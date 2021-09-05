@@ -4,13 +4,26 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "preact": "^10.5.13"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@preact/preset-vite": "^2.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-preact": "^1.1.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2",
     "vite": "^2.5.2"
   }
 }
